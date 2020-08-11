@@ -144,8 +144,6 @@ const functionCardsStructure = (listData) => {
             modalStatsLeft.innerHTML = '';
             modalStatsRight.innerHTML = '';
             modalRoles.innerHTML = '';
-
-            // debemos creando una clase para este estilo
             document.body.classList.remove('overflowHidden');
             document.body.classList.add('visible');
             modalOverlay.classList.remove('showFlex');
@@ -209,7 +207,6 @@ const functionCardsStructure = (listData) => {
             modalStatsUncle(champion);
         });
 
-        /* Boton de MORESTATS y playButton (funcion fuera de esta ARRIBA) */
         const backCardContainer = document.createElement('div');
         backCardContainer.className = 'backCardContainer';
 
@@ -239,7 +236,6 @@ const cleanClasses = () => {
     li2[0].classList.add('active');
 };
 
-// limpiador de difficulty
 
 const cleanDifficulty = (cleanElements) => {
     cleanElements.forEach((button) => {
@@ -285,7 +281,6 @@ li2.forEach((el) => {
 });
 
 
-/*---------------------------------------------*/
 
 /* FILTRADO: POR CLASE */
 const filterClasses = (element) => {
@@ -307,7 +302,7 @@ const filterClasses = (element) => {
 li.forEach(button => filterClasses(button));
 li2.forEach(button => filterClasses(button));
 
-/*---------------------------------------------*/
+
 
 difficulty1.forEach((option) => {
     option.addEventListener('click', () => {
@@ -335,9 +330,7 @@ difficulty1.forEach((option) => {
     });
 });
 
-/*---------------------------------------------*/
 
-/* FILTRADO: ASCENDENTE Y DESCENDENTE */
 const order1 = document.querySelectorAll('.order1');
 order1.forEach((option) => {
     option.addEventListener('click', () => {
