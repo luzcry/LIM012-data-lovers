@@ -59,7 +59,7 @@ window.onscroll = () => {
     }
 };
 
-// FUNCION:PLAY BUTTON
+
 const functionPlayButton = () => {
     const playButton = document.createElement('a');
     playButton.setAttribute('href', 'https://signup.lan.leagueoflegends.com/es/signup/redownload?page_referrer=index');
@@ -73,9 +73,6 @@ const playButtonContainer1 = document.getElementById('buttonEnterSecondPage');
 playButtonContainer1.innerHTML = '';
 playButtonContainer1.appendChild(functionPlayButton());
 
-/*-------------------------------------------*/
-
-/* CREANDO:Elementos del DOM, inyectando en nodo padre */
 const championList = data.data;
 const list = document.getElementById('list');
 
@@ -137,7 +134,6 @@ const functionCardsStructure = (listData) => {
         backCardInfo.appendChild(championStats);
 
 
-        /* MODAL MORESTATS */
         const modalOverlay = document.getElementById('overlay');
         const modalRoles = document.getElementById('modal-roles');
         const modalCloseButton = document.getElementById('closeButton');
@@ -166,7 +162,7 @@ const functionCardsStructure = (listData) => {
             helmetModal.setAttribute('src', 'assets/casco.png');
             modalRoles.appendChild(helmetModal);
 
-            /*-----------------------------------------------------*/
+
 
             moreStatsLeft.map(([key, value]) => {
                 const modalStatsLeftList = document.createElement('p');
@@ -227,9 +223,8 @@ const functionCardsStructure = (listData) => {
     });
 };
 functionCardsStructure(championList);
-/*-----------------------------------------------------*/
 
-/* FILTRADO: DIGITANDO NOMBRE (FALTA PULIR) */
+
 const input = document.querySelector('#searchInputs');
 
 const ul = document.querySelector('.menu');
